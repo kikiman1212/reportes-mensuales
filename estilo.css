@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --card-bg: white;
+    --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --spacing: 1rem;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --card-bg: #1e1e1e;
+    --light-color: #2d2d2d;
+    --dark-color: #f5f5f5;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+/* Gráficos Interactivos */
+.graficos-interactivos {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+/* Resto de tus estilos... */
+.imagenes, .videos {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: calc(var(--spacing) / 2);
+}
+
+.imagenes {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+    scroll-margin-top: 80px;
+    
+    /* Nuevas propiedades para responsive */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: var(--spacing);
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
+    object-fit: contain; /* Cambiado de 'cover' a 'contain' para mejor visualización */
+    aspect-ratio: 16/9;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+/* Efecto hover solo en dispositivos no táctiles */
+@media (hover: hover) {
+    .imagenes img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+    .imagenes {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: calc(var(--spacing) * 0.75);
+    }
+    
+    .imagenes h2 {
+        font-size: 1.3rem;
+    }
+    
+    .imagenes p {
+        font-size: 0.95rem;
+    }
+}
+
+	iframe{
+	margin:20px;
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .imagenes {
+        margin-bottom: var(--spacing);
+    }
+    
+    .imagenes img {
+        aspect-ratio: 4/3; /* Ratio más vertical para móviles */
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+}
+
+@media print {
+  /* Optimizar elementos para impresión */
+  nav, button, .theme-toggle { display: none !important; }
+  
+  /* Asegurar gráficos se rendericen */
+  canvas { 
+    width: 100% !important; 
+    height: auto !important;
+  }
+  
+  /* Evitar cortes de página */
+  .chart-container, .imagenes {
+    page-break-inside: avoid;
+  }
+}

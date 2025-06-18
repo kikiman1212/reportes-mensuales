@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informe de Materiales 1</title>
+  <link rel="shortcut icon" href="kiko.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="estilo.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#graficos">Gráficos</a>
+        <a href="#videos">Videos</a>
+
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        <span class="icon">🌙</span>
+        <span>Modo Oscuro</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- TODO el contenido que se desea exportar -->
+  <div class="container" id="contenidoParaPDF">
+    <div class="intro" id="inicio">
+      <h1>Informe de salidas de Materiales en Aguascalientes y Mazatlán</h1>
+    </div>
+
+    <div class="graficos-interactivos" id="graficos">
+      <h2>Gráficos Salidas PVT</h2>
+      <h4>Se empezó a dar salidas en Mazatlán a partir de Abril</h4>
+      <div class="chart-container">
+        <canvas id="chartSalidas"></canvas>
+      </div>
+
+    </div>
+
+  
+    <div class="imagenes" id="videos">
+      <h2>Imagen de Movimientos en Postventa</h2>
+      <img src="img/Salidas Postventa.png" alt="Gráfico de movimientos en postventa" />
+      <video src="video/movimientos.mp4" width="360px" controls></video>
+    </div>
+
+ <div class="imagenes">
+      <h2>Grafico de movimientos de Aguascalientes (2005) en Materiales y Equipamientos </h2>
+      
+     <img src="img/movimientos A.jpg" alt="Gráfico de movimientos en postventa" />
+     <img src="img/movimientos A_EQU.jpg" alt="Gráfico de movimientos en postventa" />
+    </div>
+
+ <div class="imagenes">
+      <h2>Grafico de movimientos en Mazatlan (2006) a partir de que le estoy dando salidas en Abril</h2>
+     
+     <img src="img/movimientos M.jpg" alt="Gráfico de movimientos en postventa" />
+    </div>
+    </div>
+<center><h2>Base de datos de Boilers para impedir duplicados</h2></center>
+<iframe src="img/excel_boiler A.png"
+        width="1200" height="300"></iframe>
+
+<iframe src="img/excel_boiler M.png"
+        width="1200" height="300"></iframe>
+  <!-- JavaScript -->
+    <script src="grafico.js"></script>
+    <script src="modo-oscuro.js"></script>
+    <script src="carga-imagenes.js"></script>
+
+  <div class="imagenes">
+      <h2>Video de Movimientos de Pintura en Postventa</h2>
+      <video src="video/movimiento de pintura.mp4" width="360px" controls></video>
+    </div>
+  </div>
+<center><h2>Graficos de tipo radar, ejemplo para su futuro llenado</h2></center>
+ <center> <div class="chart-container">
+      <h3>Comparación de Rendimiento por Ciudad</h3>
+      <canvas id="chartRadar"></canvas>
+    </div></center>
+
+  <center>  <div class="chart-container">
+      <h3>Comparación Mensual: Aguascalientes vs Mazatlán</h3>
+      <canvas id="chartRadarMeses"></canvas>
+    </div></center>
+
+</body>
+</html>
