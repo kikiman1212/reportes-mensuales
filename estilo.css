@@ -182,7 +182,7 @@ h2 {
 }
 
 /* Para pantallas muy pequeñas */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .imagenes {
         margin-bottom: var(--spacing);
     }
@@ -190,6 +190,11 @@ h2 {
     .imagenes img {
         aspect-ratio: 4/3; /* Ratio más vertical para móviles */
     }
+
+iframe {
+    margin: 20px;
+    width: 450px;
+}
 }
 
 /* Responsive */
