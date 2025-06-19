@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="estilo.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -35,7 +36,9 @@
 
     <div class="graficos-interactivos" id="graficos">
       <h2>Gráficos Salidas PVT</h2>
+      <h4>Se empezó a dar salidas en Aguascalientes a partir de Marzo</h4>
       <h4>Se empezó a dar salidas en Mazatlán a partir de Abril</h4>
+      
       <div class="chart-container">
         <canvas id="chartSalidas"></canvas>
       </div>
@@ -50,34 +53,38 @@
     </div>
 
  <div class="imagenes">
-      <h2>Grafico de movimientos de Aguascalientes (2005) en Materiales y Equipamientos </h2>
+      <h2>Grafico de movimientos de Aguascalientes (2005) en Materiales y Equipamientos y Entradas </h2>
       
      <img src="img/movimientos A.jpg" alt="Gráfico de movimientos en postventa" />
      <img src="img/movimientos A_EQU.jpg" alt="Gráfico de movimientos en postventa" />
     </div>
 
  <div class="imagenes">
-      <h2>Grafico de movimientos en Mazatlan (2006) a partir de que le estoy dando salidas en Abril</h2>
+      <h2>Grafico de movimientos en Mazatlán (2006) a partir de que le estoy dando salidas en Abril Materiales - Salidas y Entradas</h2>
      
      <img src="img/movimientos M.jpg" alt="Gráfico de movimientos en postventa" />
     </div>
+    
+
+    <div class="imagenes">
+      <h2>Base de datos de Boilers para impedir duplicados en Aguascalientes</h2>
+      <!-- <iframe src="img/excel_boiler A.png"></iframe> -->
+       <img src="img/excel_boiler A.png" alt="">
     </div>
-<center><h2>Base de datos de Boilers para impedir duplicados</h2></center>
-<iframe src="img/excel_boiler A.png"
-        width="1200" height="300"></iframe>
 
-<iframe src="img/excel_boiler M.png"
-        width="1200" height="300"></iframe>
-  <!-- JavaScript -->
-    <script src="grafico.js"></script>
-    <script src="modo-oscuro.js"></script>
-    <script src="carga-imagenes.js"></script>
+    <div class="imagenes">
+      <h2>Base de datos de Boilers para impedir duplicados en Mazatlán</h2>
+      <iframe src="img/excel_boiler M.png"></iframe>
+    </div>
 
+ 
+
+
+  
   <div class="imagenes">
-      <h2>Video de Movimientos de Pintura en Postventa</h2>
+      <h2>Video de Movimientos de Pintura en Postventa de Enero a Mayo</h2>
       <video src="video/movimiento de pintura.mp4" width="360px" controls></video>
     </div>
-  </div>
 <center><h2>Graficos de tipo radar, ejemplo para su futuro llenado</h2></center>
  <center> <div class="chart-container">
       <h3>Comparación de Rendimiento por Ciudad</h3>
@@ -88,6 +95,32 @@
       <h3>Comparación Mensual: Aguascalientes vs Mazatlán</h3>
       <canvas id="chartRadarMeses"></canvas>
     </div></center>
+</div>
+<br>
+<br>
+<footer>
+<div class="redes-sociales">
+            <a href="https://facebook.com" target="_blank">
+                <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="https://github.com" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://youtube.com/shorts/E-sdyXnsJ54?si=0KyPvjmMNKzJkeLj" target="_blank">
+                <i class="bi bi-youtube"></i> YouTube
+            </a>
+        </div>
+        <p>&copy; 2025 Kiko. Todos los derechos reservados.</p>
+
+</footer>
+    <!-- JavaScript -->
+    <script src="grafico.js"></script>
+    <script src="modo-oscuro.js"></script>
+    <script src="carga-imagenes.js"></script>
+
 
 </body>
 </html>

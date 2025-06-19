@@ -153,6 +153,18 @@ h2 {
     background-size: 200% 100%;
 }
 
+video {
+    width: 100%;
+    height: 260px;
+    border-radius: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 /* Efecto hover solo en dispositivos no táctiles */
 @media (hover: hover) {
     .imagenes img:hover {
@@ -160,6 +172,100 @@ h2 {
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 }
+
+/* Estilos para el footer */
+footer {
+    position: fixed; /* Posición relativa */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.942); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para los íconos de redes sociales */
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.redes-sociales a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.redes-sociales .bi {
+    font-size: 20px; /* Tamaño del ícono */
+}
+.redes-sociales {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilos base para los íconos */
+.redes-sociales a {
+    color: white; /* Color inicial del texto */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el ícono y el texto */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Estilos para los íconos */
+.redes-sociales .bi {
+    font-size: 20px; /* Tamaño del ícono */
+    transition: color 0.3s ease; /* Transición suave para el ícono */
+}
+
+/* Facebook - Azul (#1877F2) */
+.redes-sociales a[href*="facebook.com"]:hover {
+    color: #1877F2; /* Cambia el color del texto */
+}
+.redes-sociales a[href*="facebook.com"]:hover .bi-facebook {
+    color: #1877F2; /* Cambia el color del ícono */
+}
+
+/* GitHub - Negro (#333) */
+.redes-sociales a[href*="github.com"]:hover {
+    color: #333; /* Cambia el color del texto */
+}
+.redes-sociales a[href*="github.com"]:hover .bi-github {
+    color: #333; /* Cambia el color del ícono */
+}
+
+/* Instagram - Degradado (rosa #E4405F a morado #833AB4) */
+.redes-sociales a[href*="instagram.com"]:hover {
+    color: #E4405F; /* Cambia el color del texto */
+}
+.redes-sociales a[href*="instagram.com"]:hover .bi-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Aplica el degradado al ícono */
+}
+
+/* YouTube - Rojo (#FF0000) */
+.redes-sociales a[href*="youtube.com"]:hover {
+    color: #FF0000; /* Cambia el color del texto */
+}
+.redes-sociales a[href*="youtube.com"]:hover .bi-youtube {
+    color: #FF0000; /* Cambia el color del ícono */
+}
+
 
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
@@ -177,12 +283,10 @@ h2 {
     }
 }
 
-	iframe{
-	margin:20px;
-}
+
 
 /* Para pantallas muy pequeñas */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .imagenes {
         margin-bottom: var(--spacing);
     }
@@ -192,8 +296,12 @@ h2 {
     }
 
 iframe {
-    margin: 20px;
-    width: 450px;
+    margin-bottom: var(--spacing);
+    width: 100%;
+}
+
+img{
+    width: 100%;
 }
 }
 
